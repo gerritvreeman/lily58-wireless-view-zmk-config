@@ -20,6 +20,62 @@
             #binding-cells = <0>;
             mods = <(MOD_RCTL|MOD_LCTL)>;
         };
+        c_p_to_up: c_p_to_up {
+            compatible = "zmk,behavior-mod-morph";
+            label = "C_P_TO_UP";
+            bindings = <&kp P>, <&kp UP>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RCTL|MOD_LCTL)>;
+        };
+        c_f_to_right: c_f_to_right {
+            compatible = "zmk,behavior-mod-morph";
+            label = "C_F_TO_RIGHT";
+            bindings = <&kp F>, <&kp RIGHT>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RCTL|MOD_LCTL)>;
+        };
+        c_b_to_left: c_b_to_left{
+            compatible = "zmk,behavior-mod-morph";
+            label = "C_B_TO_LEFT";
+            bindings = <&kp B>, <&kp LEFT>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RCTL|MOD_LCTL)>;
+        };
+        c_h_to_bspc: c_h_to_bspc{
+            compatible = "zmk,behavior-mod-morph";
+            label = "C_H_TO_BSPC";
+            bindings = <&kp H>, <&kp BSPC>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RCTL|MOD_LCTL)>;
+        };
+        c_d_to_del: c_d_to_del{
+            compatible = "zmk,behavior-mod-morph";
+            label = "C_D_TO_DEL";
+            bindings = <&kp D>, <&kp DEL>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RCTL|MOD_LCTL)>;
+        };
+        c_a_to_home: c_a_to_home{
+            compatible = "zmk,behavior-mod-morph";
+            label = "C_A_TO_HOME";
+            bindings = <&kp A>, <&kp HOME>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RCTL|MOD_LCTL)>;
+        };
+        c_e_to_end: c_e_to_end{
+            compatible = "zmk,behavior-mod-morph";
+            label = "C_A_TO_END";
+            bindings = <&kp E>, <&kp END>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RCTL|MOD_LCTL)>;
+        };
     };
 
     keymap {
