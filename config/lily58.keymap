@@ -9,17 +9,16 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
-    combos {
-        compatible = "zmk,combos";
+    combos { compatible = "zmk,combos"; };
 
-        del {
-            bindings = <&kp DEL>;
-            key-positions = <24 27>;
-        };
+    behaviors {
+        c_n_to_down: c_n_to_down {
+            compatible = "zmk,behavior-mod-morph";
+            label = "C_N_TO_DOWN";
+            bindings = <&kp N>, <&kp DOWN>;
 
-        bkspce {
-            bindings = <&kp BACKSPACE>;
-            key-positions = <24 30>;
+            #binding-cells = <0>;
+            mods = <(MOD_RCTL|MOD_LCTL)>;
         };
     };
 
