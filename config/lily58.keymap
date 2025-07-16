@@ -66,18 +66,18 @@
             mods = <(MOD_RCTL|MOD_LCTL)>;
         };
 
-        c_a_to_home: c_a_to_gui_left {
+        c_a_to_gui_left: c_a_to_gui_left {
             compatible = "zmk,behavior-mod-morph";
-            label = "C_A_TO_HOME";
+            label = "C_A_TO_GUI_LEFT";
             bindings = <&kp A>, <&kp LG(LEFT)>;
 
             #binding-cells = <0>;
             mods = <(MOD_RCTL|MOD_LCTL)>;
         };
 
-        c_e_to_end: c_e_to_gui_right {
+        c_e_to_gui_right: c_e_to_gui_right {
             compatible = "zmk,behavior-mod-morph";
-            label = "C_A_TO_END";
+            label = "C_A_TO_GUI_RIGHT";
             bindings = <&kp E>, <&kp LG(RIGHT)>;
 
             #binding-cells = <0>;
