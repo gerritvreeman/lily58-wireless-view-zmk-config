@@ -174,7 +174,7 @@
             bindings = <
 &kp ESC    &kp N1  &kp N2  &kp N3             &kp N4  &kp N5                                   &kp N6        &kp N7       &kp N8         &kp N9   &kp N0      &kp MINUS
 &kp TAB    &kp Q   &kp W   &c_e_to_gui_right  &kp R   &kp T                                    &kp Y         &kp U        &c_i_to_tab    &kp O    &c_p_to_up  &kp EQUAL
-&kp LCTRL  &HM_A   &HM_S   &HM_D              &HM_F   &kp G                                    &c_h_to_bspc  &HM_J        &HM_K          &HM_L    &HM_SEMI    &kp SQT
+&kp LCTRL  HM_A    HM_S    HM_D               HM_F    &kp G                                    &c_h_to_bspc  HM_J         HM_K           HM_L     HM_SEMI    &kp SQT
 &kp LSHFT  &kp Z   &kp X   &kp C              &kp V   &c_b_to_left  &c_lbkt_to_esc  &kp RBKT   &c_n_to_down  &c_m_to_ret  &kp COMMA      &kp DOT  &kp FSLH    &kp RSHFT
                            &kp LALT           &mo 2   &kp RET       &kp SPACE       &kp SPACE  &kp RET       &mo 1        &kp RALT
             >;
