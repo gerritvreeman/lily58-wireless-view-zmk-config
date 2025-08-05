@@ -29,18 +29,18 @@
 
 /* ───── home-row macros ───── */
 /* #define HM_A    &hml LSFT &c_a_to_gui_left */
-#define HM_A    &hml LSFT &kp A
-#define HM_S    &hml LCTL &kp S
+#define HM_A    &hml LSFT A
+#define HM_S    &hml LCTL S
 /* #define HM_D    &hml LALT &c_d_to_del */
-#define HM_D    &hml LALT &kp D
+#define HM_D    &hml LALT D
 /* #define HM_F    &hml LGUI &c_f_to_right */
-#define HM_F    &hml LGUI &kp F
+#define HM_F    &hml LGUI F
 
 /* #define HM_J    &hmr RGUI &c_j_to_lshft_ret */
-#define HM_J    &hmr RGUI &kp J
-#define HM_K    &hmr RALT &kp K
-#define HM_L    &hmr RCTL &kp L
-#define HM_SEMI &hmr RSFT &kp SEMI
+#define HM_J    &hmr RGUI J
+#define HM_K    &hmr RALT K
+#define HM_L    &hmr RCTL L
+#define HM_SEMI &hmr RSFT SEMI
 
 / {
     combos { compatible = "zmk,combos"; };
@@ -172,11 +172,11 @@
         default_layer {
             display-name = "Base";
             bindings = <
-&kp ESC    &kp N1  &kp N2  &kp N3             &kp N4  &kp N5                                   &kp N6        &kp N7             &kp N8         &kp N9   &kp N0      &kp MINUS
-&kp TAB    &kp Q   &kp W   &c_e_to_gui_right  &kp R   &kp T                                    &kp Y         &kp U              &c_i_to_tab    &kp O    &c_p_to_up  &kp EQUAL
-&kp LCTRL  &HM_A   &HM_S   &HM_D              &HM_F   &kp G                                    &c_h_to_bspc  &c_j_to_lshft_ret  &kp K          &kp L    &kp SEMI    &kp SQT
-&kp LSHFT  &kp Z   &kp X   &kp C              &kp V   &c_b_to_left  &c_lbkt_to_esc  &kp RBKT   &c_n_to_down  &c_m_to_ret        &kp COMMA      &kp DOT  &kp FSLH    &kp RSHFT
-                           &kp LALT           &mo 2   &kp RET       &kp SPACE       &kp SPACE  &kp RET       &mo 1              &kp RALT
+&kp ESC    &kp N1  &kp N2  &kp N3             &kp N4  &kp N5                                   &kp N6        &kp N7       &kp N8         &kp N9   &kp N0      &kp MINUS
+&kp TAB    &kp Q   &kp W   &c_e_to_gui_right  &kp R   &kp T                                    &kp Y         &kp U        &c_i_to_tab    &kp O    &c_p_to_up  &kp EQUAL
+&kp LCTRL  &HM_A   &HM_S   &HM_D              &HM_F   &kp G                                    &c_h_to_bspc  &HM_J        &HM_K          &HM_L    &HM_SEMI    &kp SQT
+&kp LSHFT  &kp Z   &kp X   &kp C              &kp V   &c_b_to_left  &c_lbkt_to_esc  &kp RBKT   &c_n_to_down  &c_m_to_ret  &kp COMMA      &kp DOT  &kp FSLH    &kp RSHFT
+                           &kp LALT           &mo 2   &kp RET       &kp SPACE       &kp SPACE  &kp RET       &mo 1        &kp RALT
             >;
         };
         symbol_layer {
