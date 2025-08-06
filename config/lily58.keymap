@@ -28,19 +28,23 @@
                   54 55 56 57 >
 
 /* ───── home-row macros ───── */
-/* #define HM_A    &hml LSFT &c_a_to_gui_left */
 #define HM_A    &hml LSFT A
 #define HM_S    &hml LCTL S
-/* #define HM_D    &hml LALT &c_d_to_del */
 #define HM_D    &hml LALT D
-/* #define HM_F    &hml LGUI &c_f_to_right */
 #define HM_F    &hml LGUI F
+#define HM_1    &hml LSFT 1
+#define HM_2    &hml LCTL 2
+#define HM_3    &hml LALT 3
+#define HM_4    &hml LGUI 4
 
-/* #define HM_J    &hmr RGUI &c_j_to_lshft_ret */
 #define HM_J    &hmr RGUI J
 #define HM_K    &hmr RALT K
 #define HM_L    &hmr RCTL L
 #define HM_SEMI &hmr RSFT SEMI
+#define HM_7    &hmr RGUI 7
+#define HM_8    &hmr RALT 8
+#define HM_9    &hmr RCTL 9
+#define HM_0    &hmr RSFT 0
 
 / {
     combos { compatible = "zmk,combos"; };
@@ -51,8 +55,8 @@
           #binding-cells = <2>;
           flavor = "balanced";
           require-prior-idle-ms = <150>;
-          tapping-term-ms       = <280>;
-          quick-tap-ms          = <175>;
+          tapping-term-ms       = <200>;
+          quick-tap-ms          = <0>;
           bindings = <&kp>, <&kp>;
           hold-trigger-key-positions = RH_KEYS;
           hold-trigger-on-release;
@@ -62,107 +66,11 @@
           #binding-cells = <2>;
           flavor = "balanced";
           require-prior-idle-ms = <150>;
-          tapping-term-ms       = <280>;
-          quick-tap-ms          = <175>;
+          tapping-term-ms       = <200>;
+          quick-tap-ms          = <0>;
           bindings = <&kp>, <&kp>;
           hold-trigger-key-positions = LH_KEYS;
           hold-trigger-on-release;
-        };
-        c_n_to_down: c_n_to_down {
-            compatible = "zmk,behavior-mod-morph";
-            label = "C_N_TO_DOWN";
-            bindings = <&kp N>, <&kp DOWN>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_RCTL|MOD_LCTL)>;
-        };
-        c_p_to_up: c_p_to_up {
-            compatible = "zmk,behavior-mod-morph";
-            label = "C_P_TO_UP";
-            bindings = <&kp P>, <&kp UP>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_RCTL|MOD_LCTL)>;
-        };
-        c_f_to_right: c_f_to_right {
-            compatible = "zmk,behavior-mod-morph";
-            label = "C_F_TO_RIGHT";
-            bindings = <&kp F>, <&kp RIGHT>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_RCTL|MOD_LCTL)>;
-        };
-        c_b_to_left: c_b_to_left {
-            compatible = "zmk,behavior-mod-morph";
-            label = "C_B_TO_LEFT";
-            bindings = <&kp B>, <&kp LEFT>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_RCTL|MOD_LCTL)>;
-        };
-        c_h_to_bspc: c_h_to_bspc {
-            compatible = "zmk,behavior-mod-morph";
-            label = "C_H_TO_BSPC";
-            bindings = <&kp H>, <&kp BSPC>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_RCTL|MOD_LCTL)>;
-        };
-        c_d_to_del: c_d_to_del {
-            compatible = "zmk,behavior-mod-morph";
-            label = "C_D_TO_DEL";
-            bindings = <&kp D>, <&kp DEL>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_RCTL|MOD_LCTL)>;
-        };
-        c_a_to_gui_left: c_a_to_gui_left {
-            compatible = "zmk,behavior-mod-morph";
-            label = "C_A_TO_GUI_LEFT";
-            bindings = <&kp A>, <&kp LG(LEFT)>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_RCTL|MOD_LCTL)>;
-        };
-        c_e_to_gui_right: c_e_to_gui_right {
-            compatible = "zmk,behavior-mod-morph";
-            label = "C_A_TO_GUI_RIGHT";
-            bindings = <&kp E>, <&kp LG(RIGHT)>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_RCTL|MOD_LCTL)>;
-        };
-        c_lbkt_to_esc: c_lbkt_to_esc {
-            compatible = "zmk,behavior-mod-morph";
-            label = "C_LBKT_TO_ESC";
-            bindings = <&kp LBKT>, <&kp ESC>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_RCTL|MOD_LCTL)>;
-        };
-        c_i_to_tab: c_i_to_tab {
-            compatible = "zmk,behavior-mod-morph";
-            label = "C_I_TO_TAB";
-            bindings = <&kp I>, <&kp TAB>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_RCTL|MOD_LCTL)>;
-        };
-        c_m_to_ret: c_m_to_ret {
-            compatible = "zmk,behavior-mod-morph";
-            label = "C_M_TO_RET";
-            bindings = <&kp M>, <&kp RET>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_RCTL|MOD_LCTL)>;
-        };
-        c_j_to_lshft_ret: c_j_to_lshft_ret {
-            compatible = "zmk,behavior-mod-morph";
-            label = "C_J_TO_LSHFT_RET";
-            bindings = <&kp J>, <&kp LS(RET)>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_RCTL|MOD_LCTL)>;
         };
     };
 
@@ -172,13 +80,35 @@
         default_layer {
             display-name = "Base";
             bindings = <
-&kp ESC  &kp N1  &kp N2  &kp N3   &kp N4  &kp N5                         &kp N6   &kp N7     &kp N8   &kp N9    &kp N0   &kp MINUS
-&kp TAB  &kp Q   &kp W   &kp E    &kp R   &kp T                          &kp Y    &kp U      &kp I    &kp O     &kp P    &kp EQUAL
-&trans   HM_A    HM_S    HM_D     HM_F    &kp G                          &kp H    HM_J       HM_K     HM_L      HM_SEMI  &kp SQT
-&trans   &kp Z   &kp X   &kp C    &kp V   &kp B    &kp LBKT   &kp RBKT   &kp N    &kp COMMA  &kp DOT  &kp FSLH  &trans
-                         &kp BSPC &mo 2   &kp RET  &kp SPACE  &kp SPACE  &kp RET  &mo 1      &kp DEL
+&kp GRAVE  &kp N1  &kp N2  &kp N3   &kp N4    &kp N5                         &kp N6   &kp N7    &kp N8     &kp N9    &kp N0   &kp MINUS
+&kp TAB    &kp Q   &kp W   &kp E    &kp R     &kp T                          &kp Y    &kp U     &kp I      &kp O     &kp P    &kp EQUAL
+&kp ESC    HM_A    HM_S    HM_D     HM_F      &kp G                          &kp H    HM_J      HM_K       HM_L      HM_SEMI  &kp SQT
+&none      &kp Z   &kp X   &kp C    &kp V     &kp B    &none      &none      &kp N    &kp M     &kp COMMA  &kp DOT  &kp FSLH  &none
+                           &mo 1    &kp BSPC  &kp RET  &kp SPACE  &kp SPACE  &kp RET  &kp DEL   &mo 1
             >;
         };
+
+        number_symbol_layer {
+            display-name = "NumSym";
+            bindings = <
+&trans     &trans    &trans  &trans    &trans    &trans                     &trans     &trans    &trans    &trans    &trans    &trans
+&kp TILDE  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT                  &kp CARET  &kp AMPS  &kp STAR  &kp LPAR  &kp RPAR  &kp UNDER
+&kp GRAVE  HM_1      HM_2    HM_3      HM_4      &kp N5                     &kp N6     HM_7      HM_8      HM_9      HM_0      &kp MINUS
+&trans     &trans    &trans  &trans    &trans    &trans     &trans  &trans  &trans     &trans    &trans    &kp LBKT  &kp RBKT  &trans
+                             &trans    &trans    &trans     &trans  &trans  &trans     &trans    &trans
+            >;
+        };
+
+/*         symbol_layer { */
+/*             display-name = "Symbols"; */
+/*             bindings = < */
+/* &trans     &trans    &trans  &trans    &trans    &trans                     &trans     &trans    &trans    &trans    &trans    &trans */
+/* &trans     &trans    &trans  &trans    &trans    &trans                     &trans     &trans    &trans    &kp LBKT  &kp RBKT  &trans */
+/* &kp TILDE  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT                  &kp CARET  &kp AMPS  &kp STAR  &kp LPAR  &kp RPAR  &kp UNDER */
+/* &trans     &trans    &trans  &trans    &trans    &trans     &trans  &trans  &trans     &trans    &kp PLUS  &kp LBRC  &kp RBRC  &kp PIPE */
+/*                              &trans    &trans    &trans     &trans  &trans  &trans     &trans    &trans */
+/*             >; */
+/*         }; */
 /*         default_layer { */
 /*             display-name = "Base"; */
 /*             bindings = < */
@@ -189,26 +119,6 @@
 /*                          &kp BSPC           &mo 2   &kp RET       &kp SPACE       &kp SPACE  &kp RET       &mo 1        &kp DEL */
 /*             >; */
 /*         }; */
-        symbol_layer {
-            display-name = "Symbols";
-            bindings = <
-&trans     &trans    &trans  &trans    &trans      &trans                     &trans     &trans    &trans    &trans    &trans    &trans
-&trans     &trans    &trans  &trans    &trans      &trans                     &trans     &trans    &trans    &kp LBKT  &kp RBKT  &trans
-&kp GRAVE  &kp EXCL  &kp AT  &kp HASH  &kp DOLLAR  &kp PRCNT                  &kp CARET  &kp AMPS  &kp STAR  &kp LPAR  &kp RPAR  &kp MINUS
-&trans     &trans    &trans  &trans    &trans      &trans     &trans  &trans  &trans     &trans    &kp PLUS  &kp LBRC  &kp RBRC  &kp PIPE
-                             &trans    &trans      &trans     &trans  &trans  &trans     &trans    &trans
-            >;
-        };
-        number_layer {
-            display-name = "Numbers";
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5                  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-            >;
-        };
 /*         raise_layer { */
 /*             display-name = "Raise"; */
 /*             bindings = < */
