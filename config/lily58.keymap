@@ -26,19 +26,19 @@
 #define HM_S    &hml LCTL S
 #define HM_D    &hml LALT D
 #define HM_F    &hml LGUI F
-#define HM_1    &hml LSFT 1
-#define HM_2    &hml LCTL 2
-#define HM_3    &hml LALT 3
-#define HM_4    &hml LGUI 4
+#define HM_1    &hml LSFT N1
+#define HM_2    &hml LCTL N2
+#define HM_3    &hml LALT N3
+#define HM_4    &hml LGUI N4
 
 #define HM_J    &hmr RGUI J
 #define HM_K    &hmr RALT K
 #define HM_L    &hmr RCTL L
 #define HM_SEMI &hmr RSFT SEMI
-#define HM_7    &hmr RGUI 7
-#define HM_8    &hmr RALT 8
-#define HM_9    &hmr RCTL 9
-#define HM_0    &hmr RSFT 0
+#define HM_7    &hmr RGUI N7
+#define HM_8    &hmr RALT N8
+#define HM_9    &hmr RCTL N9
+#define HM_0    &hmr RSFT N0
 
 / {
     combos { compatible = "zmk,combos"; };
