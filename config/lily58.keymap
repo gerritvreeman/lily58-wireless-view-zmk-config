@@ -71,49 +71,70 @@
     keymap {
         compatible = "zmk,keymap";
 
+/*         default_layer { */
+/*             display-name = "Base"; */
+/*             bindings = < */
+/* &kp GRAVE  &kp N1  &kp N2  &kp N3  &kp N4    &kp N5                         &kp N6   &kp N7    &kp N8     &kp N9    &kp N0    &kp MINUS */
+/* &kp TAB    &kp Q   &kp W   &kp E   &kp R     &kp T                          &kp Y    &kp U     &kp I      &kp O     &kp P     &kp EQUAL */
+/* &kp ESC    HM_A    HM_S    HM_D    HM_F      &kp G                          &kp H    HM_J      HM_K       HM_L      HM_SEMI   &kp SQT */
+/* &none      &kp Z   &kp X   &kp C   &kp V     &kp B    &none      &none      &kp N    &kp M     &kp COMMA  &kp DOT   &kp FSLH  &kp BSLH */
+/*                            &mo 1   &kp BSPC  &kp RET  &kp SPACE  &kp SPACE  &kp RET  &kp DEL   &mo 2 */
+/*             >; */
+/*         }; */
         default_layer {
             display-name = "Base";
             bindings = <
-&kp GRAVE  &kp N1  &kp N2  &kp N3  &kp N4    &kp N5                         &kp N6   &kp N7    &kp N8     &kp N9    &kp N0    &kp MINUS
-&kp TAB    &kp Q   &kp W   &kp E   &kp R     &kp T                          &kp Y    &kp U     &kp I      &kp O     &kp P     &kp EQUAL
-&kp ESC    HM_A    HM_S    HM_D    HM_F      &kp G                          &kp H    HM_J      HM_K       HM_L      HM_SEMI   &kp SQT
-&none      &kp Z   &kp X   &kp C   &kp V     &kp B    &none      &none      &kp N    &kp M     &kp COMMA  &kp DOT   &kp FSLH  &kp BSLH
-                           &mo 1   &kp BSPC  &kp RET  &kp SPACE  &kp SPACE  &kp RET  &kp DEL   &mo 2
+&kp GRAVE &kp N1      &kp N2      &kp N3      &kp N4      &kp N5                      &kp N6   &kp N7      &kp N8      &kp N9      &kp N0         &kp MINUS
+&kp TAB   &kp Q       &kp W       &kp E       &kp R       &kp T                       &kp Y    &kp U       &kp I       &kp O       &kp P          &kp EQUAL
+&kp ESC   &hml LSFT A &hml LCTL S &hml LALT D &hml LGUI F &kp G                       &kp H    &hmr RGUI J &hmr RALT K &hmr RCTL L &hmr RSFT SEMI &kp SQT
+&none     &kp Z       &kp X       &kp C       &kp V       &kp B   &none     &none     &kp N    &kp M       &kp COMMA   &kp DOT     &kp FSLH       &kp BSLH
+                                  &mo 1       &kp BSPC    &kp RET &kp SPACE &kp SPACE &kp RET  &kp DEL     &mo 2
             >;
         };
 
-        number_symbol_layer_left {
-            display-name = "NumSym";
+        numpad_navigation_layer_left {
+            display-name = "NumNav";
             bindings = <
-&kp F1     &kp F2    &kp F3  &kp F4    &kp F5    &kp F6                     &kp F7     &kp F8    &kp F9    &kp F10   &kp F11   &kp F12
-&kp TILDE  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT                  &kp CARET  &kp AMPS  &kp STAR  &kp LPAR  &kp RPAR  &kp UNDER
-&kp GRAVE  HM_1      HM_2    HM_3      HM_4      &kp N5                     &kp N6     HM_7      HM_8      HM_9      HM_0      &kp MINUS
-&trans     &trans    &trans  &trans    &trans    &trans     &trans  &trans  &kp LEFT   &kp DOWN  &kp UP    &kp RIGHT &kp LBKT  &kp RBKT
-                             &trans    &trans    &trans     &trans  &trans  &trans     &trans    &trans
+&kp F1     &kp F2          &kp F3       &kp F4       &kp F5       &kp F6                     &kp F7     &kp F8         &kp F9       &kp F10         &kp F11    &kp F12
+&trans     &kp LBKT        &kp N7       &kp N8       &kp N9       &kp RBKT                   &trans     &trans         &trans       &trans          &trans     &trans
+&trans     &hml LSFT GRAVE &hml LCTL N4 &hml LALT N5 &hml LGUI N6 &kp MINUS                  &kp LEFT   &hml RGUI DOWN &hml RALT UP &hml RCTL RIGHT &trans     &trans
+&trans     &kp DOT         &kp N1       &kp N2       &kp N3       &kp PLUS   &trans  &trans  &trans     &trans         &trans       &trans          &trans     &trans
+                                        &kp DOT      &kp N0       &trans     &trans  &trans  &trans     &trans         &trans
             >;
         };
 
-        number_symbol_layer_right {
-            display-name = "NumSym";
+        numpad_navigation_layer_right {
+            display-name = "NumNav";
             bindings = <
-&kp F1     &kp F2    &kp F3  &kp F4    &kp F5    &kp F6                     &kp F7     &kp F8    &kp F9    &kp F10   &kp F11   &kp F12
-&kp TILDE  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT                  &kp CARET  &kp AMPS  &kp STAR  &kp LPAR  &kp RPAR  &kp UNDER
-&kp GRAVE  HM_1      HM_2    HM_3      HM_4      &kp N5                     &kp N6     HM_7      HM_8      HM_9      HM_0      &kp MINUS
-&trans     &trans    &trans  &trans    &trans    &trans     &trans  &trans  &kp LEFT   &kp DOWN  &kp UP    &kp RIGHT &kp LBKT  &kp RBKT
-                             &trans    &trans    &trans     &trans  &trans  &trans     &trans    &trans
+&kp F1     &kp F2          &kp F3       &kp F4       &kp F5       &kp F6                     &kp F7     &kp F8         &kp F9       &kp F10         &kp F11    &kp F12
+&trans     &kp LBKT        &kp N7       &kp N8       &kp N9       &kp RBKT                   &trans     &trans         &trans       &trans          &trans     &trans
+&trans     &hml LSFT GRAVE &hml LCTL N4 &hml LALT N5 &hml LGUI N6 &kp MINUS                  &kp LEFT   &hml RGUI DOWN &hml RALT UP &hml RCTL RIGHT &trans     &trans
+&trans     &kp DOT         &kp N1       &kp N2       &kp N3       &kp PLUS   &trans  &trans  &trans     &trans         &trans       &trans          &trans     &trans
+                                        &kp DOT      &kp N0       &trans     &trans  &trans  &trans     &trans         &trans
             >;
         };
 
-        number_numpad_layer {
-            display-name = "NumNumPad";
-            bindings = <
-&kp F1     &kp F2    &kp F3  &kp F4    &kp F5    &kp F6                     &kp F7     &kp F8    &kp F9    &kp F10   &kp F11    &kp F12
-&kp GRAVE  &kp N1    &kp N2  &kp N3    &kp N4    &kp N5                     &kp N6     &kp N7    &kp N8    &kp N9    &kp N0     &kp MINUS
-&trans     &trans    &trans  &trans    &trans    &trans                     &kp MINUS  &kp N4    &kp N5    &kp N6    &kp LBKT   &trans
-&trans     &trans    &trans  &trans    &trans    &trans     &trans  &trans  &kp PLUS   &kp N1    &kp N2    &kp N3    &kp RBKT   &trans
-                             &trans    &trans    &trans     &trans  &trans  &trans     &kp N0    &kp DOT
-            >;
-        };
+/*         number_symbol_layer_left { */
+/*             display-name = "NumSym"; */
+/*             bindings = < */
+/* &kp F1     &kp F2    &kp F3  &kp F4    &kp F5    &kp F6                     &kp F7     &kp F8    &kp F9    &kp F10   &kp F11   &kp F12 */
+/* &kp TILDE  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT                  &kp CARET  &kp AMPS  &kp STAR  &kp LPAR  &kp RPAR  &kp UNDER */
+/* &kp GRAVE  HM_1      HM_2    HM_3      HM_4      &kp N5                     &kp N6     HM_7      HM_8      HM_9      HM_0      &kp MINUS */
+/* &trans     &trans    &trans  &trans    &trans    &trans     &trans  &trans  &kp LEFT   &kp DOWN  &kp UP    &kp RIGHT &kp LBKT  &kp RBKT */
+/*                              &trans    &trans    &trans     &trans  &trans  &trans     &trans    &trans */
+/*             >; */
+/*         }; */
+
+/*         number_symbol_layer_right { */
+/*             display-name = "NumSym"; */
+/*             bindings = < */
+/* &kp F1     &kp F2    &kp F3  &kp F4    &kp F5    &kp F6                     &kp F7     &kp F8    &kp F9    &kp F10   &kp F11   &kp F12 */
+/* &kp TILDE  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT                  &kp CARET  &kp AMPS  &kp STAR  &kp LPAR  &kp RPAR  &kp UNDER */
+/* &kp GRAVE  HM_1      HM_2    HM_3      HM_4      &kp N5                     &kp N6     HM_7      HM_8      HM_9      HM_0      &kp MINUS */
+/* &trans     &trans    &trans  &trans    &trans    &trans     &trans  &trans  &kp LEFT   &kp DOWN  &kp UP    &kp RIGHT &kp LBKT  &kp RBKT */
+/*                              &trans    &trans    &trans     &trans  &trans  &trans     &trans    &trans */
+/*             >; */
+/*         }; */
 
         extra_1 { status = "reserved"; };
 
