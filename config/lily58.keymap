@@ -70,7 +70,7 @@
 &trans     &kp LBKT        &kp N7       &kp N8       &kp N9       &kp RBKT                   &trans     &trans         &trans       &trans          &trans     &trans
 &trans     &hml LSFT GRAVE &hml LCTL N4 &hml LALT N5 &hml LGUI N6 &kp MINUS                  &kp LEFT   &hml RGUI DOWN &hml RALT UP &hml RCTL RIGHT &trans     &trans
 &trans     &kp DOT         &kp N1       &kp N2       &kp N3       &kp PLUS   &trans  &trans  &trans     &trans         &trans       &trans          &trans     &trans
-                                        &kp DOT      &kp N0       &trans     &trans  &trans  &trans     &trans         &trans
+                                        &kp N0       &trans       &trans     &trans  &trans  &trans     &trans         &trans
             >;
         };
 
