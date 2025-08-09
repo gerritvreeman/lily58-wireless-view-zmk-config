@@ -21,25 +21,6 @@
 
 #define T_KEYS 50 51 52 53 54 55 56 57
 
-/* ───── home-row macros ───── */
-#define HM_A    &hml LSFT A
-#define HM_S    &hml LCTL S
-#define HM_D    &hml LALT D
-#define HM_F    &hml LGUI F
-#define HM_1    &hml LSFT N1
-#define HM_2    &hml LCTL N2
-#define HM_3    &hml LALT N3
-#define HM_4    &hml LGUI N4
-
-#define HM_J    &hmr RGUI J
-#define HM_K    &hmr RALT K
-#define HM_L    &hmr RCTL L
-#define HM_SEMI &hmr RSFT SEMI
-#define HM_7    &hmr RGUI N7
-#define HM_8    &hmr RALT N8
-#define HM_9    &hmr RCTL N9
-#define HM_0    &hmr RSFT N0
-
 / {
     combos { compatible = "zmk,combos"; };
 
@@ -71,16 +52,6 @@
     keymap {
         compatible = "zmk,keymap";
 
-/*         default_layer { */
-/*             display-name = "Base"; */
-/*             bindings = < */
-/* &kp GRAVE  &kp N1  &kp N2  &kp N3  &kp N4    &kp N5                         &kp N6   &kp N7    &kp N8     &kp N9    &kp N0    &kp MINUS */
-/* &kp TAB    &kp Q   &kp W   &kp E   &kp R     &kp T                          &kp Y    &kp U     &kp I      &kp O     &kp P     &kp EQUAL */
-/* &kp ESC    HM_A    HM_S    HM_D    HM_F      &kp G                          &kp H    HM_J      HM_K       HM_L      HM_SEMI   &kp SQT */
-/* &none      &kp Z   &kp X   &kp C   &kp V     &kp B    &none      &none      &kp N    &kp M     &kp COMMA  &kp DOT   &kp FSLH  &kp BSLH */
-/*                            &mo 1   &kp BSPC  &kp RET  &kp SPACE  &kp SPACE  &kp RET  &kp DEL   &mo 2 */
-/*             >; */
-/*         }; */
         default_layer {
             display-name = "Base";
             bindings = <
@@ -110,7 +81,7 @@
 &trans     &kp LBKT        &kp N7       &kp N8       &kp N9       &kp RBKT                   &trans     &trans         &trans       &trans          &trans     &trans
 &trans     &hml LSFT GRAVE &hml LCTL N4 &hml LALT N5 &hml LGUI N6 &kp MINUS                  &kp LEFT   &hml RGUI DOWN &hml RALT UP &hml RCTL RIGHT &trans     &trans
 &trans     &kp DOT         &kp N1       &kp N2       &kp N3       &kp PLUS   &trans  &trans  &trans     &trans         &trans       &trans          &trans     &trans
-                                        &kp DOT      &kp N0       &trans     &trans  &trans  &trans     &trans         &trans
+                                        &kp N0       &trans       &trans     &trans  &trans  &trans     &trans         &trans
             >;
         };
 
