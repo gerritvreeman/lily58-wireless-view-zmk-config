@@ -65,10 +65,10 @@
         number_symbol_layer {
             display-name = "NumSym";
             bindings = <
-&kp F1     &kp F2        &kp F3        &kp F4        &kp F5        &kp F6                     &kp F7     &kp F8        &kp F9        &kp F10       &kp F11                  &kp F12
-&kp TILDE  &kp EXCL      &kp AT        &kp HASH      &kp DLLR      &kp PRCNT                  &kp CARET  &kp AMPS      &kp STAR      &kp LPAR      &kp RPAR                 &kp UNDER
-&kp GRAVE  &hml LSFT N1  &hml LCTL N2  &hml LALT N3  &hml LGUI N4  &kp N5                     &kp N6     &hmr RGUI N7  &hmr RALT N8  &hmr RCTL N9  &hmr RSFT N0             &kp MINUS
-&trans     &kp TILDE     &kp GRAVE     &SQT          &kp LBKT      &kp LBRC   &trans  &trans  &kp RBRC   &kp RBKT      &MINUS        &EQUAL        &kp BSLH                 &trans
+&kp F1     &kp F2        &kp F3        &kp F4        &kp F5        &kp F6                     &kp F7     &kp F8        &kp F9        &kp F10       &kp F11       &kp F12
+&kp TILDE  &kp EXCL      &kp AT        &kp HASH      &kp DLLR      &kp PRCNT                  &kp CARET  &kp AMPS      &kp STAR      &kp LPAR      &kp RPAR      &kp UNDER
+&kp GRAVE  &hml LSFT N1  &hml LCTL N2  &hml LALT N3  &hml LGUI N4  &kp N5                     &kp N6     &hmr RGUI N7  &hmr RALT N8  &hmr RCTL N9  &hmr RSFT N0  &kp MINUS
+&trans     &kp TILDE     &kp GRAVE     &kp SQT       &kp LBKT      &kp LBRC   &trans  &trans  &kp RBRC   &kp RBKT      &MINUS        &EQUAL        &kp BSLH      &trans
                                        &trans        &trans        &trans     &trans  &trans  &trans     &trans        &trans
             >;
         };
