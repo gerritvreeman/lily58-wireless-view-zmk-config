@@ -109,25 +109,36 @@
             >;
         };
 
-        left_layer {
-            display-name = "Num";
+        num_layer {
+            display-name = "NUM";
             bindings = <
 &none &none     &none     &none     &none     &none                         &none     &none     &none     &none     &none     &none
-&none &trans    &trans    &trans    &trans    &trans                        &trans    &kp N7    &kp N8    &kp N9    &trans    &none
-&none &trans    &trans    &trans    &trans    &trans                        &trans    &kp N4    &kp N5    &kp N6    &trans    &none
-&none &kp LSFT  &kp LCTL  &kp LALT  &kp LGUI  &trans    &none     &none     &trans    &kp N1    &kp N2    &kp N3    &trans    &none
-                          &none     &none     &trans    &trans    &trans    &kp N0    &none     &none
+&none &trans    &trans    &trans    &trans    &trans                        &trans    &kp N7    &kp N8    &kp N9    &kp MINUS &none
+&none &trans    &trans    &trans    &trans    &trans                        &trans    &kp N4    &kp N5    &kp N6    &kp PLUS  &none
+&none &kp LSFT  &kp LCTL  &kp LALT  &kp LGUI  &trans    &none     &none     &trans    &kp N1    &kp N2    &kp N3    &kp EQUAL &none
+                          &none     &none     &trans    &trans    &mo 3     &kp N0    &none     &none
             >;
         };
 
-        right_layer {
-            display-name = "Num";
+        nav_layer {
+            display-name = "NAV";
             bindings = <
-&none &none     &none    &none     &none    &none                      &none    &none    &none    &none     &none     &none
-&none &kp GRAVE &trans   &kp RBRC  &kp RBKT &kp RPAR                   &trans   &trans   &trans   &kp MINUS &kp EQUAL &none
-&none &trans    &trans   &kp LBRC  &kp LBKT &kp LPAR                   &kp LEFT &kp DOWN &kp UP   &kp RIGHT &kp SQT   &none
-&none &kp LSFT  &kp LCTL &kp LALT  &kp LGUI &trans   &none    &none    &trans   &trans   &trans   &trans    &kp FSLH  &none
-                         &none     &none    &trans   &trans   &trans   &trans   &none    &none
+&none &none     &none    &none     &none    &none                      &none    &none    &none    &none     &none    &none
+&none &kp GRAVE &trans   &kp RBRC  &kp RBKT &kp RPAR                   &trans   &trans   &trans   &trans    &kp BSLH &none
+&none &trans    &trans   &kp LBRC  &kp LBKT &kp LPAR                   &kp LEFT &kp DOWN &kp UP   &kp RIGHT &kp SQT  &none
+&none &kp LSFT  &kp LCTL &kp LALT  &kp LGUI &trans   &none    &none    &trans   &kp RGUI &kp RALT &kp RCTL  &kp RSFT &none
+                         &none     &none    &trans   &mo 3    &trans   &trans   &none    &none
+            >;
+        };
+
+        fun_layer {
+            display-name = "FUN";
+            bindings = <
+&none &none   &none  &none  &none  &none                     &none      &none        &none        &none      &none  &none
+&none &kp F10 &kp F7 &kp F8 &kp F9 &bt BT_SEL 1              &trans     &kp C_BRI_DN &kp C_BRI_UP &trans     &kp PP &none
+&none &kp F11 &kp F4 &kp F5 &kp F6 &bt BT_SEL 2              &kp C_PREV &kp C_VOL_DN &kp C_VOL_UP &kp C_NEXT &trans &none
+&none &kp F12 &kp F1 &kp F2 &kp F3 &bt BT_CLR   &none  &none &trans     &kp C_MUTE   &trans       &trans     &trans &none
+                     &none  &none  &trans       &trans &mo 3 &kp N0     &none        &none
             >;
         };
 
