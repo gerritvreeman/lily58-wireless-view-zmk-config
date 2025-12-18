@@ -3,11 +3,11 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
-/* 0	1	2	3	4	5			6	7	8	9	10	11 */
-/* 12	13	14	15	16	17			18	19	20	21	22	23 */
-/* 24	25	26	27	28	29			30	31	32	33	34	35 */
-/* 36	37	38	39	40	41	42	43	44	45	46	47	48	49 */
-/* 			50	51	52	53	54	55	56	57 */
+/*  0  1  2  3  4  5        6  7  8  9 10 11 */
+/* 12 13 14 15 16 17       18 19 20 21 22 23 */
+/* 24 25 26 27 28 29       30 31 32 33 34 35 */
+/* 36 37 38 39 40 41 42 43 44 45 46 47 48 49 */
+/*          50 51 52 53 54 55 56 57          */
 
 #define LH_KEYS  0  1  2  3  4  5 \
                 12 13 14 15 16 17 \
@@ -31,7 +31,7 @@
       };
       combo_tab {
           timeout-ms = <25>;
-          key-positions = <26 27>;
+          key-positions = <38 39>;
           bindings = <&kp TAB>;
       };
       combo_bspc {
@@ -39,62 +39,11 @@
           key-positions = <20 21>;
           bindings = <&kp BSPC>;
       };
-      combo_del {
-          timeout-ms = <25>;
-          key-positions = <21 22>;
-          bindings = <&kp DEL>;
-      };
       combo_ret {
           timeout-ms = <25>;
-          key-positions = <32 33>;
+          key-positions = <46 47>;
           bindings = <&kp RET>;
       };
-      combo_lpar {
-          timeout-ms = <25>;
-          key-positions = <27 28>;
-          bindings = <&kp LPAR>;
-      };
-      combo_rpar {
-          timeout-ms = <25>;
-          key-positions = <31 32>;
-          bindings = <&kp RPAR>;
-      };
-      combo_lbkt {
-          timeout-ms = <25>;
-          key-positions = <15 16>;
-          bindings = <&kp LBKT>;
-      };
-      combo_rbkt {
-          timeout-ms = <25>;
-          key-positions = <19 20>;
-          bindings = <&kp RBKT>;
-      };
-    };
-
-    behaviors {
-        hml: home_row_mod_left {
-          compatible = "zmk,behavior-hold-tap";
-          #binding-cells = <2>;
-          flavor = "balanced";
-          require-prior-idle-ms = <125>;
-          tapping-term-ms       = <225>;
-          quick-tap-ms          = <175>;
-          bindings = <&kp>, <&kp>;
-          hold-trigger-key-positions = <RH_KEYS T_KEYS>;
-          hold-trigger-on-release;
-        };
-        hmr: home_row_mod_right {
-          compatible = "zmk,behavior-hold-tap";
-          #binding-cells = <2>;
-          flavor = "balanced";
-          require-prior-idle-ms = <125>;
-          tapping-term-ms       = <225>;
-          quick-tap-ms          = <175>;
-          bindings = <&kp>, <&kp>;
-          hold-trigger-key-positions = <LH_KEYS T_KEYS>;
-          hold-trigger-on-release;
-        };
-    };
 
     keymap {
         compatible = "zmk,keymap";
