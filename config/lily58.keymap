@@ -50,6 +50,26 @@
           key-positions = <46 47>;
           bindings = <&kp RET>;
       };
+      combo_esc2 {
+          timeout-ms = <35>;
+          key-positions = <13 14>;
+          bindings = <&kp ESC>;
+      };
+      combo_tab2 {
+          timeout-ms = <35>;
+          key-positions = <37 38>;
+          bindings = <&kp TAB>;
+      };
+      combo_bspc2 {
+          timeout-ms = <35>;
+          key-positions = <21 22>;
+          bindings = <&kp BSPC>;
+      };
+      combo_ret2 {
+          timeout-ms = <35>;
+          key-positions = <47 48>;
+          bindings = <&kp RET>;
+      };
     };
 
     keymap {
