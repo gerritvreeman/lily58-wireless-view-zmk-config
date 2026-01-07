@@ -29,7 +29,7 @@
 
 / {
     behaviors {
-      ml: mod_left {
+      bml: bottom_mod_left {
         compatible = "zmk,behavior-hold-tap";
         #binding-cells = <2>;
         flavor = "balanced";
@@ -40,7 +40,7 @@
         hold-trigger-key-positions = <RH_KEYS T_KEYS>;
         hold-trigger-on-release;
       };
-      mr: mod_right {
+      bmr: bottom_mod_right {
         compatible = "zmk,behavior-hold-tap";
         #binding-cells = <2>;
         flavor = "balanced";
@@ -84,7 +84,7 @@
               &kp GRAVE       &kp N1          &kp N2          &kp N3          &kp N4          &kp N5                                          &kp N6          &kp N7          &kp N8          &kp N9          &kp N0          &kp MINUS
               &kp ESC         &kp Q           &kp W           &kp E           &kp R           &kp T                                           &kp Y           &kp U           &kp I           &kp O           &kp P           &kp BSPC
               &kp TAB         &kp A           &kp S           &kp D           &kp F           &kp G                                           &kp H           &kp J           &kp K           &kp L           &kp SEMI        &kp RET
-              &kp LSFT        &ml LALT Z      &ml LCTL X      &ml  LGUI C     &ml LSFT V      &kp B           &kp LBKT        &kp RBKT        &kp N           &mr RSFT M      &mr RGUI COMMA  &mr RCTL DOT    &mr RALT FSLH   &kp RSFT
+              &kp LSFT        &bml LALT Z     &bml LCTL X     &bml  LGUI C    &bml LSFT V     &kp B           &kp LBKT        &kp RBKT        &kp N           &bmr RSFT M     &bmr RGUI COMMA &bmr RCTL DOT   &bmr RALT FSLH  &kp RSFT
                                                               &kp LALT        &kp LGUI        &kp SPACE       &mo NUM         &mo NAV         &kp SPACE       &kp RGUI        &kp RALT
             >;
         };
@@ -95,7 +95,7 @@
               &kp GRAVE       &kp N1          &kp N2          &kp N3          &kp N4          &kp N5                                          &kp N6          &kp N7          &kp N8          &kp N9          &kp N0          &kp MINUS
               &kp ESC         &kp Q           &kp W           &kp F           &kp P           &kp B                                           &kp J           &kp L           &kp U           &kp Y           &kp SEMI        &kp BSPC
               &kp TAB         &kp A           &kp R           &kp S           &kp T           &kp G                                           &kp M           &kp N           &kp E           &kp I           &kp O           &kp RET
-              &kp LSFT        &ml LALT Z      &ml LCTL X      &ml LGUI C      &ml LSFT D      &kp V           &kp LBKT        &kp RBKT        &kp K           &mr RSFT H      &mr RGUI COMMA  &mr RCTL DOT    &mr RALT FSLH   &kp RSFT
+              &kp LSFT        &bml LALT Z     &bml LCTL X     &bml LGUI C     &bml LSFT D     &kp V           &kp LBKT        &kp RBKT        &kp K           &bmr RSFT H     &bmr RGUI COMMA &bmr RCTL DOT   &bmr RALT FSLH  &kp RSFT
                                                               &kp LALT        &kp LGUI        &kp SPACE       &mo NUM         &mo NAV         &kp SPACE       &kp RGUI        &kp RALT
             >;
         };
@@ -106,7 +106,7 @@
                &trans          &trans          &trans          &trans          &trans          &trans                                          &trans          &trans          &trans          &trans          &trans          &trans
                &trans          &kp TILDE       &trans          &kp LBKT        &kp RBKT        &kp DQT                                         &kp FSLH        &kp N7          &kp N8          &kp N9          &kp MINUS       &trans
                &trans          &kp GRAVE       &trans          &kp LPAR        &kp RPAR        &kp SQT                                         &kp STAR        &kp N4          &kp N5          &kp N6          &kp PLUS        &trans
-               &trans          &ml LALT BSLH   &kp LCTL        &ml LGUI LBRC   &ml LSFT RBRC   &caps_word      &trans          &trans          &kp TAB         &mr RSFT N1     &mr RGUI N2     &mr LCTL N3     &mr LALT EQUAL  &trans
+               &trans          &bml LALT BSLH  &kp LCTL        &bml LGUI LBRC  &bml LSFT RBRC  &caps_word      &trans          &trans          &kp TAB         &bmr RSFT N1    &bmr RGUI N2    &bmr LCTL N3    &bmr LALT EQUAL &trans
                                                                &trans          &trans          &trans          &trans          &mo FUN         &kp N0          &kp DOT         &trans
             >;
         };
