@@ -106,7 +106,7 @@
                &trans          &trans          &trans          &trans          &trans          &trans                                          &trans          &trans          &trans          &trans          &trans          &trans
                &trans          &kp TILDE       &trans          &kp LBKT        &kp RBKT        &kp DQT                                         &kp FSLH        &kp N7          &kp N8          &kp N9          &kp MINUS       &trans
                &trans          &kp GRAVE       &trans          &kp LPAR        &kp RPAR        &kp SQT                                         &kp STAR        &kp N4          &kp N5          &kp N6          &kp PLUS        &trans
-               &trans          &hr LALT BSLH   &kp LCTL        &hl LGUI LBRC   &hl LSFT RBRC   &caps_word      &trans          &trans          &kp TAB         &hr RSFT N1     &hr RGUI N2     &hr LCTL N3     &hr LALT EQUAL  &trans
+               &trans          &ml LALT BSLH   &kp LCTL        &ml LGUI LBRC   &ml LSFT RBRC   &caps_word      &trans          &trans          &kp TAB         &mr RSFT N1     &mr RGUI N2     &mr LCTL N3     &mr LALT EQUAL  &trans
                                                                &trans          &trans          &trans          &trans          &mo FUN         &kp N0          &kp DOT         &trans
             >;
         };
