@@ -24,12 +24,12 @@
 #define BASE 0
 #define COLE 1
 #define NUM 2
-#define SYM 3
-#define NAV 4
+#define NAV 3
+#define FUN 4
 
 / {
     behaviors {
-      hml: home_row_mod_left {
+      ml: mod_left {
         compatible = "zmk,behavior-hold-tap";
         #binding-cells = <2>;
         flavor = "balanced";
@@ -40,7 +40,7 @@
         hold-trigger-key-positions = <RH_KEYS T_KEYS>;
         hold-trigger-on-release;
       };
-      hmr: home_row_mod_right {
+      mr: mod_right {
         compatible = "zmk,behavior-hold-tap";
         #binding-cells = <2>;
         flavor = "balanced";
@@ -55,41 +55,21 @@
     combos {
       compatible = "zmk,combos";
       combo_esc {
-          timeout-ms = <25>;
-          key-positions = <14 15>;
-          bindings = <&kp ESC>;
-      };
-      combo_tab {
-          timeout-ms = <25>;
-          key-positions = <38 39>;
-          bindings = <&kp TAB>;
-      };
-      combo_bspc {
-          timeout-ms = <25>;
-          key-positions = <20 21>;
-          bindings = <&kp BSPC>;
-      };
-      combo_ret {
-          timeout-ms = <25>;
-          key-positions = <46 47>;
-          bindings = <&kp RET>;
-      };
-      combo_esc2 {
           timeout-ms = <45>;
           key-positions = <13 14>;
           bindings = <&kp ESC>;
       };
-      combo_tab2 {
+      combo_tab {
           timeout-ms = <45>;
           key-positions = <37 38>;
           bindings = <&kp TAB>;
       };
-      combo_bspc2 {
+      combo_bspc {
           timeout-ms = <45>;
           key-positions = <21 22>;
           bindings = <&kp BSPC>;
       };
-      combo_ret2 {
+      combo_ret {
           timeout-ms = <45>;
           key-positions = <47 48>;
           bindings = <&kp RET>;
@@ -101,55 +81,53 @@
         default_layer {
             display-name = "BASE";
             bindings = <
-&kp ESC        &kp N1         &kp N2         &kp N3         &kp N4         &kp N5                                       &kp N6         &kp N7         &kp N8         &kp N9         &kp N0         &kp BSPC
-&kp TAB        &kp Q          &kp W          &kp E          &kp R          &kp T                                        &kp Y          &kp U          &kp I          &kp O          &kp P          &kp BSLH
-&sk LCTL       &kp A          &kp S          &kp D          &kp F          &kp G                                        &kp H          &kp J          &kp K          &kp L          &kp SEMI       &sk RCTL
-&sk LSFT       &kp Z          &kp X          &kp C          &kp V          &kp B          &kp LBKT       &kp RBKT       &kp N          &kp M          &kp COMMA      &kp DOT        &kp FSLH       &sk RSFT
-                                             &sk LALT       &sk LGUI       &kp SPACE      &mo NUM        &mo SYM        &kp SPACE      &sk RGUI       &sk RALT
+              &kp GRAVE       &kp N1          &kp N2          &kp N3          &kp N4          &kp N5                                          &kp N6          &kp N7          &kp N8          &kp N9          &kp N0          &kp MINUS
+              &kp ESC         &kp Q           &kp W           &kp E           &kp R           &kp T                                           &kp Y           &kp U           &kp I           &kp O           &kp P           &kp BSPC
+              &kp TAB         &kp A           &kp S           &kp D           &kp F           &kp G                                           &kp H           &kp J           &kp K           &kp L           &kp SEMI        &kp RET
+              &kp LSFT        &ml LALT Z      &ml LCTL X      &ml  LGUI C     &ml LSFT V      &kp B           &kp LBKT        &kp RBKT        &kp N           &mr RSFT M      &mr RGUI COMMA  &mr RCTL DOT    &mr RALT FSLH   &kp RSFT
+                                                              &kp LALT        &kp LGUI        &kp SPACE       &mo NUM         &mo NAV         &kp SPACE       &kp RGUI        &kp RALT
             >;
         };
 
         colemak_dh_layer {
             display-name = "COLE";
             bindings = <
-&kp ESC        &kp N1         &kp N2         &kp N3         &kp N4         &kp N5                                       &kp N6         &kp N7         &kp N8         &kp N9         &kp N0         &kp BSPC
-&kp TAB        &kp Q          &kp W          &kp F          &kp P          &kp B                                        &kp J          &kp L          &kp U          &kp Y          &kp SEMI       &kp BSLH
-&sk LCTL       &kp A          &kp R          &kp S          &kp T          &kp G                                        &kp M          &kp N          &kp E          &kp I          &kp O          &sk RCTL
-&sk LSFT       &kp Z          &kp X          &kp C          &kp D          &kp V          &kp LBKT       &kp RBKT       &kp K          &kp H          &kp COMMA      &kp DOT        &kp FSLH       &sk RSFT
-                                             &sk LALT       &sk LGUI       &kp SPACE      &mo NUM        &mo SYM        &kp SPACE      &sk RGUI       &sk RALT
+              &kp GRAVE       &kp N1          &kp N2          &kp N3          &kp N4          &kp N5                                          &kp N6          &kp N7          &kp N8          &kp N9          &kp N0          &kp MINUS
+              &kp ESC         &kp Q           &kp W           &kp F           &kp P           &kp B                                           &kp J           &kp L           &kp U           &kp Y           &kp SEMI        &kp BSPC
+              &kp TAB         &kp A           &kp R           &kp S           &kp T           &kp G                                           &kp M           &kp N           &kp E           &kp I           &kp O           &kp RET
+              &kp LSFT        &ml LALT Z      &ml LCTL X      &ml LGUI C      &ml LSFT D      &kp V           &kp LBKT        &kp RBKT        &kp K           &mr RSFT H      &mr RGUI COMMA  &mr RCTL DOT    &mr RALT FSLH   &kp RSFT
+                                                              &kp LALT        &kp LGUI        &kp SPACE       &mo NUM         &mo NAV         &kp SPACE       &kp RGUI        &kp RALT
             >;
         };
 
         number_layer {
             display-name = "NUM";
             bindings = <
-&trans         &trans         &trans         &trans         &trans         &trans                                       &trans         &trans         &trans         &trans         &trans         &trans
-&trans         &trans         &trans         &trans         &trans         &trans                                       &trans         &kp N7         &kp N8         &kp N9         &kp MINUS      &trans
-&trans         &sk LALT       &sk LCTL       &sk LGUI       &sk LSFT       &caps_word                                   &trans         &kp N4         &kp N5         &kp N6         &kp PLUS       &trans
-&trans         &trans         &trans         &trans         &trans         &trans         &trans         &trans         &kp N0         &kp N1         &kp N2         &kp N3         &kp EQUAL      &trans
-                                             &trans         &trans         &trans         &trans         &mo NAV        &trans         &trans         &trans
+               &trans          &trans          &trans          &trans          &trans          &trans                                          &trans          &trans          &trans          &trans          &trans          &trans
+               &trans          &kp TILDE       &trans          &kp LBKT        &kp RBKT        &kp DQT                                         &kp FSLH        &kp N7          &kp N8          &kp N9          &kp MINUS       &trans
+               &trans          &kp GRAVE       &trans          &kp LPAR        &kp RPAR        &kp SQT                                         &kp STAR        &kp N4          &kp N5          &kp N6          &kp PLUS        &trans
+               &trans          &hr LALT BSLH   &kp LCTL        &hl LGUI LBRC   &hl LSFT RBRC   &caps_word      &trans          &trans          &kp TAB         &hr RSFT N1     &hr RGUI N2     &hr LCTL N3     &hr LALT EQUAL  &trans
+                                                               &trans          &trans          &trans          &trans          &mo FUN         &kp N0          &kp DOT         &trans
             >;
         };
-
-        symbol_layer {
-            display-name = "SYM";
-            bindings = <
-&trans         &trans         &trans         &trans         &trans         &trans                                       &trans         &trans         &trans         &trans         &trans         &trans
-&trans         &kp TILDE      &kp RBRC       &kp RBKT       &kp RPAR       &kp DQT                                      &trans         &trans         &trans         &trans         &trans         &trans
-&trans         &kp GRAVE      &kp LBRC       &kp LBKT       &kp LPAR       &kp SQT                                      &caps_word     &sk RSFT       &sk RGUI       &sk RCTL       &sk RALT       &trans
-&trans         &kp BSLH       &trans         &trans         &trans         &trans         &trans         &trans         &trans         &trans         &trans         &trans         &trans         &trans
-                                             &trans         &trans         &trans         &mo NAV        &trans         &trans         &trans         &trans
-            >;
-        };
-
         navigation_layer {
             display-name = "NAV";
             bindings = <
-&kp F1         &kp F2         &kp F3         &kp F4         &kp F5         &kp F6                                       &kp F7         &kp F8         &kp F9         &kp F10        &kp F11        &kp F12
-&trans         &trans         &kp C_PREV     &kp C_PP       &kp C_NEXT     &kp C_VOL_UP                                 &kp ESCAPE     &kp HOME       &kp UP         &kp END        &kp BSPC       &trans
-&trans         &sk LALT       &sk LCTL       &sk LGUI       &sk LSFT       &kp C_MUTE                                   &kp TAB        &kp LEFT       &kp DOWN       &kp RIGHT      &kp RET        &trans
-&trans         &bootloader    &bt BT_PRV     &bt BT_CLR     &bt BT_NXT     &kp C_VOL_DN   &trans         &trans         &trans         &trans         &to BASE       &to COLE       &bootloader    &trans
-                                             &trans         &trans         &trans         &trans         &trans         &trans         &trans         &trans
+               &trans          &trans          &trans          &trans          &trans          &trans                                          &trans          &trans          &trans          &trans          &trans          &trans
+               &trans          &trans          &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT &msc SCRL_UP                                    &kp PG_UP       &kp HOME        &kp UP          &kp END         &trans          &trans
+               &trans          &trans          &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT &msc SCRL_DN                                    &kp PG_DN       &kp LEFT        &kp DOWN        &kp RIGHT       &trans          &trans
+               &trans          &kp LALT        &kp LCTL        &kp LGUI        &kp LSFT        &trans          &trans          &trans          &trans          &kp RSFT        &kp RGUI        &kp RCTL        &kp RALT        &trans
+                                                               &trans          &mkp MB2        &mkp MB1        &mo FUN         &trans          &trans          &trans          &trans
+            >;
+        };
+        function_layer {
+            display-name = "FUN";
+            bindings = <
+               &kp F1          &kp F2          &kp F3          &kp F4          &kp F5          &kp F6                                          &kp F7          &kp F8          &kp F9          &kp F10         &kp F11         &kp F12
+               &trans          &trans          &trans          &bt BT_PRV      &bt BT_NXT      &kp BT_CLR                                      &kp C_PREV      &kp C_PP        &kp C_NEXT      &kp C_MUTE      &kp C_VOL_DN    &kp C_VOL_UP
+               &trans          &trans          &trans          &trans          &trans          &trans                                          &trans          &trans          &trans          &trans          &to BASE        &to COLE
+               &bootloader     &kp LALT        &kp LCTL        &kp LGUI        &kp LSFT        &trans          &trans          &trans          &trans          &kp RSFT        &kp RGUI        &kp RCTL        &kp RALT        &bootloader
+                                                               &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans
             >;
         };
 
