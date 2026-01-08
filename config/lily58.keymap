@@ -124,7 +124,7 @@
             display-name = "FUN";
             bindings = <
                &kp F1          &kp F2          &kp F3          &kp F4          &kp F5          &kp F6                                          &kp F7          &kp F8          &kp F9          &kp F10         &kp F11         &kp F12
-               &trans          &trans          &trans          &bt BT_PRV      &bt BT_NXT      &kp BT_CLR                                      &kp C_PREV      &kp C_PP        &kp C_NEXT      &kp C_MUTE      &kp C_VOL_DN    &kp C_VOL_UP
+               &trans          &trans          &trans          &bt BT_PRV      &bt BT_NXT      &bt BT_CLR                                      &kp C_PREV      &kp C_PP        &kp C_NEXT      &kp C_MUTE      &kp C_VOL_DN    &kp C_VOL_UP
                &trans          &trans          &trans          &trans          &trans          &trans                                          &trans          &trans          &trans          &trans          &to BASE        &to COLE
                &bootloader     &kp LALT        &kp LCTL        &kp LGUI        &kp LSFT        &trans          &trans          &trans          &trans          &kp RSFT        &kp RGUI        &kp RCTL        &kp RALT        &bootloader
                                                                &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans
