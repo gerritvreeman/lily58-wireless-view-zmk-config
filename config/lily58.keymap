@@ -110,6 +110,7 @@
                                                                &trans          &trans          &trans          &trans          &mo FUN         &kp N0          &kp DOT         &trans
             >;
         };
+
         navigation_layer {
             display-name = "NAV";
             bindings = <
@@ -120,6 +121,7 @@
                                                                &mkp MB3        &mkp MB2        &mkp MB1        &mo FUN         &trans          &trans          &trans          &trans
             >;
         };
+
         function_layer {
             display-name = "FUN";
             bindings = <
